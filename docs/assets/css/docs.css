@@ -12,12 +12,8 @@
 
 body {
   position: relative;
-  padding-top: 80px;
+  padding-top: 40px;
   font-size: 14px;
-  background-color: #fff;
-  background-image: url(../img/grid-20px.png);
-  background-repeat: repeat-x;
-  background-position: 0 40px;
 }
 
 /* Code in headings */
@@ -87,7 +83,22 @@ hr.soften {
 ------------------------- */
 .jumbotron {
   position: relative;
+  padding: 40px 0;
+  color: #fff;
   text-align: center;
+  text-shadow: 0 1px 5px rgba(0,0,0,.25), 0 0 30px rgba(0,0,0,.075);
+  background: #020031; /* Old browsers */
+  background: -moz-linear-gradient(45deg,  #020031 0%, #6d3353 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#020031), color-stop(100%,#6d3353)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg,  #020031 0%,#6d3353 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg,  #020031 0%,#6d3353 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg,  #020031 0%,#6d3353 100%); /* IE10+ */
+  background: linear-gradient(45deg,  #020031 0%,#6d3353 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#020031', endColorstr='#6d3353',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15), inset 0 -3px 7px rgba(0,0,0,.15);
+     -moz-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15), inset 0 -3px 7px rgba(0,0,0,.15);
+          box-shadow: inset 0 -1px 0 rgba(0,0,0,.15), inset 0 -3px 7px rgba(0,0,0,.15);
+
 }
 .jumbotron h1 {
   font-size: 80px;
@@ -118,22 +129,8 @@ hr.soften {
 ------------------------- */
 .masthead {
   padding: 50px 0 60px;
-  margin-top: -40px;
   margin-bottom: 0;
   color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 5px rgba(0,0,0,.25), 0 0 30px rgba(0,0,0,.075);
-  background: #020031; /* Old browsers */
-  background: -moz-linear-gradient(45deg,  #020031 0%, #6d3353 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#020031), color-stop(100%,#6d3353)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(45deg,  #020031 0%,#6d3353 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(45deg,  #020031 0%,#6d3353 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(45deg,  #020031 0%,#6d3353 100%); /* IE10+ */
-  background: linear-gradient(45deg,  #020031 0%,#6d3353 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#020031', endColorstr='#6d3353',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
-     -moz-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
-          box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
 }
 .masthead h1 {
   font-size: 120px;
@@ -211,6 +208,9 @@ hr.soften {
 .subhead h1 {
   font-size: 60px;
 }
+.subhead p {
+  margin-bottom: 20px;
+}
 .subhead .navbar {
   display: none;
 }
@@ -222,19 +222,22 @@ hr.soften {
 
 .marketing {
   text-align: center;
+  color: #5a5a5a;
 }
 .marketing h1 {
   margin: 60px 0 10px;
   font-size: 60px;
-  font-weight: 400;
+  font-weight: 200;
   line-height: 1;
   letter-spacing: -1px;
 }
 .marketing h2 {
-  font-weight: 400;
-`}
+  font-weight: 200;
+  margin-bottom: 5px;
+}
 .marketing p {
-  color: #555;
+  font-size: 16px;
+  line-height: 1.5;
 }
 .marketing .marketing-byline {
   margin-bottom: 40px;
@@ -257,6 +260,7 @@ hr.soften {
   padding: 70px 0;
   margin-top: 70px;
   border-top: 1px solid #e5e5e5;
+  background-color: #f5f5f5;
 }
 .footer p {
   margin-bottom: 0;
@@ -567,6 +571,11 @@ h2 + .row {
   padding: 0;
   height: 90px;
 }
+.bs-navbar-top-example .navbar-fixed-top,
+.bs-navbar-bottom-example .navbar-fixed-bottom {
+  margin-left: 0;
+  margin-right: 0;
+}
 .bs-navbar-top-example {
   -webkit-border-radius: 0 0 4px 4px;
      -moz-border-radius: 0 0 4px 4px;
@@ -593,9 +602,6 @@ form.bs-docs-example {
 .bs-docs-example .lead {
   font-size: 18px;
   line-height: 24px;
-}
-.bs-docs-example li {
-  line-height: 18px;
 }
 
 /* Tooltips */
@@ -730,7 +736,7 @@ form.bs-docs-example {
     padding-top: 0;
   }
   /* Widen masthead and social buttons to fill body padding */
-  .masthead {
+  .jumbotron {
     margin-top:   -20px; /* Offset bottom margin on .navbar */
   }
 }
@@ -744,7 +750,7 @@ form.bs-docs-example {
   }
 
   /* Widen masthead and social buttons to fill body padding */
-  .masthead {
+  .jumbotron {
     padding: 40px 20px;
     margin-top:   -20px; /* Offset bottom margin on .navbar */
     margin-right: -20px;
@@ -756,6 +762,9 @@ form.bs-docs-example {
   .masthead p,
   .masthead .btn {
     font-size: 24px;
+  }
+  .marketing .span4 {
+    margin-bottom: 40px;
   }
   .bs-docs-social {
     margin: 0 -20px;
@@ -906,5 +915,3 @@ form.bs-docs-example {
   }
 
 }
-
-
